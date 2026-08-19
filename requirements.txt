@@ -1,0 +1,13 @@
+fastapi>=0.110.0
+uvicorn>=0.28.0
+pydantic>=2.6.0
+ortools>=9.9.3963
+networkx>=3.2.1
+geopy>=2.4.1
+redis>=5.0.3
+streamlit>=1.32.0
+folium>=0.16.0
+streamlit-folium>=0.18.0
+pandas>=2.2.0
+numpy>=1.26.0
+requests>=2.31.0
