@@ -1,3 +1,35 @@
+<div align="center">
+
+# 🧊 ZeroMelt Engine
+### Dynamic Cold-Chain Logistics & Thermal VRPTW Optimization Platform
+
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.32+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![OR-Tools](https://img.shields.io/badge/Google_OR--Tools-Optimization-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://developers.google.com/optimization)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+
+*An intelligent quick-commerce dispatch and vehicle routing system that dynamically prevents perishable grocery degradation using real-time thermal kinetics, Google OR-Tools constraint satisfaction, and street-level road network routing.*
+
+[Architecture](#-system-architecture--data-flow) • [Thermal Physics](#-thermal-decay-formulation) • [Quickstart](#-quickstart) • [API Reference](#-api-endpoints)
+
+</div>
+
+---
+
+## 📌 Problem Overview
+
+In modern quick-commerce logistics (10–20 minute delivery SLAs), high ambient outdoor temperatures cause heat-sensitive perishable goods—such as ice cream, dairy, raw poultry, and fresh produce—to degrade rapidly in transit. 
+
+Standard routing engines optimize strictly for total travel distance or generic delivery time slots, ignoring thermal shelf-life decay.
+
+**ZeroMelt Engine** integrates environmental thermodynamics into combinatorial optimization:
+1. **Dynamic Thermal Deadlines:** Translates ambient temperature and SKU-level decay kinetics into hard delivery time windows.
+2. **Constrained VRPTW-PD:** Formulates and solves a Vehicle Routing Problem with Time Windows and Perishable Decay.
+3. **Spoilage Elimination:** Optimizes multi-courier vehicle assignments to ensure zero perishable quality drops below critical thresholds.
+
+---
+
 ## 🏗️ System Architecture & Data Flow
 
 ```mermaid
@@ -48,4 +80,3 @@ flowchart TD
     click API href "[https://github.com/RutRaut25/ZeroMelt-Engine/blob/main/app/main.py](https://github.com/RutRaut25/ZeroMelt-Engine/blob/main/app/main.py)" "View FastAPI Gateway" _blank
     click Dashboard href "[https://github.com/RutRaut25/ZeroMelt-Engine/blob/main/dashboard/app.py](https://github.com/RutRaut25/ZeroMelt-Engine/blob/main/dashboard/app.py)" "View Streamlit Dashboard" _blank
     click Redis href "[https://github.com/RutRaut25/ZeroMelt-Engine/blob/main/app/redis_client.py](https://github.com/RutRaut25/ZeroMelt-Engine/blob/main/app/redis_client.py)" "View Geospatial Redis Cache" _blank
-```
